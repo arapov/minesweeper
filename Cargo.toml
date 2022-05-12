@@ -14,6 +14,4 @@ wasm-bindgen = "0.2.80"
 [target.'cfg(not(target_family = "wasm"))'.dependencies]
 rand = "0.8.5"
 
-[rust]
-lld = true
-#CARGO_TARGET_WASM32_UNKNOWN_UNKNOWN_LINKER=wasm-ld
+#CARGO_TARGET_WASM32_UNKNOWN_UNKNOWN_LINKER=wasm-ld wasm-pack build -t web
